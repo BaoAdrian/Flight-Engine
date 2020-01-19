@@ -67,7 +67,10 @@ export default class Generator {
 
     const arrivalTime = departureTime.plus({ hours: duration.hours, minutes: duration.minutes }).setZone(destination.timezone);
 
+    const cost = this.random(250, 5000);
+
     return {
+      cost,
       flightNumber,
       origin,
       destination,
